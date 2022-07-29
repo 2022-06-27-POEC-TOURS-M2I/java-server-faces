@@ -21,7 +21,7 @@
         </h:form>
 
         <br />
-        
+
         <h1>Navigation conditionnelle</h1>
         <hr />
 
@@ -37,6 +37,21 @@
             <h:commandLink action="#{navigationController.goToPage}" value="Aller sur la page d'accueil">
                 <f:param name="pageId" value="home" />
             </h:commandLink>
+        </h:form>
+
+        <br />
+
+        <h1>Forward vs Redirect</h1>
+        <hr />
+
+        <h3>Forward</h3>
+        <h:form>
+            <h:commandButton action="hello" value="Forward sur la page hello" />
+        </h:form>
+
+        <h3>Redirect</h3>
+        <h:form>
+            <h:commandButton action="hello?faces-redirect=true" value="Redirection sur la page 2" />
         </h:form>
 
     </h:body>

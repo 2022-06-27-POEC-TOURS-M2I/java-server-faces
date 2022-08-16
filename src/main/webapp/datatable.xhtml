@@ -18,7 +18,7 @@
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">Deparment</f:facet>
+                    <f:facet name="header">Department</f:facet>
                         #{employee.department}
                 </h:column>
 
@@ -33,6 +33,33 @@
                 </h:column>
 
             </h:dataTable>
+
+            <h3>Add Employee</h3>
+            <hr />
+
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td><h:inputText value="#{userData.name}" /></td>
+                </tr>
+                <tr>
+                    <td>Department :</td>
+                    <td><h:inputText value="#{userData.department}" /></td>
+                </tr>
+                <tr>
+                    <td>Age :</td>
+                    <td><h:inputText value="#{userData.age}" /></td>
+                </tr>
+                <tr>
+                    <td>Salary :</td>
+                    <td><h:inputText value="#{userData.salary}" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><h:commandButton value="Add employee" action="#{userData.addEmployee}" /></td>
+                </tr>
+            </table>
+            
         </h:form>
 
     </h:body>
